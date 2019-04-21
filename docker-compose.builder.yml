@@ -1,0 +1,27 @@
+version: "2"
+services:
+  # at first create a base image for node (react here)
+  #   mount app-core to /app inside image
+  #   set images working dir to /app
+    uibase:
+      image: node:11
+      volumes:
+        - ./app-core:/app
+      working_dir: /app
+
+  # installations
+  #   install node modules
+    install:
+      extends:
+        service: uibase
+      command: npm i
+
+    build:
+      extends:
+        service: uibase
+      command: npm run build
+
+    create-bundles:
+      extends:
+        service: uibase
+      command: npm run create-bundles
