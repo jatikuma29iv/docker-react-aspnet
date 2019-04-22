@@ -16,6 +16,16 @@ services:
 #            - api
         networks:
             - appnetwork
+    
+    aspnet-template:
+        build:
+            context: ./gcf-template-webservice-aspnet
+            dockerfile: ./gcf-template-webservice-aspnet/Dockerfile
+        ports:
+            - "8080:80"
+        networks:
+            - appnetwork
+            
 #    api:
 #        image: webapp-api
 #        restart: always

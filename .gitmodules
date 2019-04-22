@@ -1,0 +1,3 @@
+[submodule "gcf-template-webservice-aspnet"]
+	path = gcf-template-webservice-aspnet
+	url = git@bitbucket.org:TE4B/gcf-template-webservice-aspnet.git
