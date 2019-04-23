@@ -331,3 +331,5 @@ ASALocalRun/
 
 .*.sw?
 *.sw?
+resources/db_oracle/data/
+resources/elk/es01_data/
