@@ -1,18 +1,42 @@
 # docker-react-aspnet
 Full stack app with docker react and aspnet
 
-# Run
+# Checkout & Run
+
+## Checkout
+
+```bash
+git clone git@github.com:jatikuma29iv/docker-react-aspnet.git
+cd docker-react-aspnet
+git submodule update --init --recursive
+```
 
 ## Install dependencies
 
 ```bash
 docker-compose -f docker-compose.builder.yml run --rm install
+docker-compose build
 ```
 
 ## Run
 
 ```bash
 docker-composer up
+```
+
+## Server startup failed
+
+If any `resource` fails to start, enable them one by one
+
+```bash
+# start Oracle DB
+docker-compose up oracledb
+
+# start keycloak
+docker-compose up keycloak
+
+# start Elasticsearch
+docker-compose up es01
 ```
 
 # Setup
